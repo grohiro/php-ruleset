@@ -1,0 +1,11 @@
+{
+    "name": "grohiro/php-ruleset",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "grohiro",
+            "email": "khirokawa@growk.jp"
+        }
+    ],
+    "require": {}
+}
