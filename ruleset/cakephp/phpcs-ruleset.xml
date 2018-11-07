@@ -1,0 +1,9 @@
+<ruleset name="Grohiro">
+  <description>grohiro/php-ruleset/cakephp</description>
+  <rule ref="../general/phpcs-ruleset.xml" />
+  <rule ref="PSR2">
+    <exclude name="PSR2.Classes.PropertyDeclaration.Underscore" />
+    <exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
+  </rule>
+</ruleset>
+

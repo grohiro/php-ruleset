@@ -4,14 +4,7 @@ PHP のコーディングスタイルの検査, 自動整形するためのル�
 
 # Install
 
-Composerでライブラリとルールセットのインストール。
-
-```bash
-$ composer require --dev squizlabs/php_codesniffer
-$ composer require --dev phpmd/phpmd
-```
-
-ComposerにGithubリポジトリを追加
+composer.json に Github リポジトリを追加
 
 ```
 "repositories": [
@@ -22,35 +15,35 @@ ComposerにGithubリポジトリを追加
 ]
 ```
 
-## Laravel
+インストール
 
-```bash
-$ composer require --dev grohiro/php-ruleset dev-master
 ```
+$ composer require grohiro/php-ruleset dev-master
+```
+
+フレームワークにあわせて composer.json にスクリプトを追加。
+
+## Laravel
 
 ソースコードディレクトリに `app/` と `tests/` を指定。
 
 ```json
 "scripts": {
-  "cs-check": "phpcs --colors -p --standard=vendor/grohiro/php-ruleset/phpcs-ruleset.xml ./app ./tests",
-  "cs-fix": "phpcbf --colors --standard=vendor/grohiro/php-ruleset/phpcs-ruleset.xml ./app ./tests",
-  "phpmd": "phpmd ./app text vendor/grohiro/php-ruleset/phpmd-ruleset.xml"
+  "cs-check": "phpcs --colors -p --standard=vendor/grohiro/php-ruleset/ruleset/laravel/phpcs-ruleset.xml ./app ./tests",
+  "cs-fix": "phpcbf --colors --standard=vendor/grohiro/php-ruleset/ruleset/laravel/phpcs-ruleset.xml ./app ./tests",
+  "phpmd": "phpmd ./app text vendor/grohiro/php-ruleset/ruleset/laravel/phpmd-ruleset.xml"
 }
 ```
 
 ## CakePHP3
 
-```bash
-$ composer require --dev grohiro/php-ruleset dev-cakephp3
-```
-
 ソースコードディレクトリに `src/` と `tests/` を指定。
 
 ```json
 "scripts": {
-  "cs-check": "phpcs --colors -p --standard=vendor/grohiro/php-ruleset/phpcs-ruleset.xml ./src ./tests",
-  "cs-fix": "phpcbf --colors --standard=vendor/grohiro/php-ruleset/phpcs-ruleset.xml ./src ./tests",
-  "phpmd": "phpmd ./src text vendor/grohiro/php-ruleset/phpmd-ruleset.xml"
+  "cs-check": "phpcs --colors -p --standard=vendor/grohiro/php-ruleset/ruleset/cakephp/phpcs-ruleset.xml ./app ./tests",
+  "cs-fix": "phpcbf --colors --standard=vendor/grohiro/php-ruleset/ruleset/cakephp/phpcs-ruleset.xml ./app ./tests",
+  "phpmd": "phpmd ./app text vendor/grohiro/php-ruleset/ruleset/cakephp/phpmd-ruleset.xml"
 }
 ```
 
