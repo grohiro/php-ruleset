@@ -1,0 +1,4 @@
+<ruleset name="Grohiro">
+  <description>grohiro/php-ruleset/laravel</description>
+  <rule ref="../general/phpcs-ruleset.xml" />
+</ruleset>
